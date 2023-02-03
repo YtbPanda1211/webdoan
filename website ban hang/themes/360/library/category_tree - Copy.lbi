@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="modTitle clearfix">
+	<span class="left"></span><span class="right"></span>
+	<div class="f_l">{$lang.goods_category}</div>
+	<div class="more"><a href="catalog.php" target="_blank">{$lang.catalog}</a></div>
+</div>
+<div class="modBox">
+  <dl id="category_tree">
+	<!--{foreach from=$categories item=cat}-->
+	<div class="toggleblock">
+     <dt class="clearfix">
+		 <a href="{$cat.url}" class="f_l">{$cat.name|escape:html}</a></dt>
+		 <!--{if $cat.cat_id}-->
+		 <dd>
+     <!--{foreach from=$cat.cat_id item=child}-->
+     <a href="{$child.url}" title="{$child.name|escape:html}">{$child.name|escape:html}</a>
+     <!--{/foreach}-->
+		 </dd>
+		 <!--{/if}-->
+	</div>	 
+  <!--{/foreach}-->
+	</dl> 
+</div>

@@ -1,0 +1,128 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="block tc footer">
+<div class="footer_cosl left_info">
+   <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a> 
+        <!-- {if !$smarty.foreach.nav_bottom_list.last} -->
+         | 
+        <!-- {/if} -->
+
+      <!-- {/foreach} --><br />
+  <!-- {/if} -->  
+<h1>Liên hệ với chúng tôi : TRUNG TÂM ĐIỆN THOẠI TÂN THÀNH MOBILE</h1>
+ <div class="address">
+ Địa chỉ : {$shop_address}
+ 
+  {$shop_postcode}
+  <br />
+ <!-- 客服电话{if $service_phone} -->
+      Tel: {$service_phone}  <br/>
+ <!-- 结束客服电话{/if} -->
+ <!-- 邮件{if $service_email} -->
+      E-mail: {$service_email}<br />
+ <!-- 结束邮件{/if} -->
+ </div>
+  {$copyright}<br />
+ <!-- QQ 号码 {foreach from=$qq item=im} -->
+      <!-- {if $im} -->
+      <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin={$im}&amp;Site={$shop_name}&amp;Menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:{$im}:4" height="16" border="0" alt="QQ" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束QQ号码 -->
+      <!-- 淘宝旺旺 {foreach from=$ww item=im} -->
+      <!-- {if $im} -->
+			<a href="http://amos1.taobao.com/msg.ww?v=2&uid={$im|escape:u8_url}&s=2" target="_blank"><img src="http://amos1.taobao.com/online.ww?v=2&uid={$im|escape:u8_url}&s=2" width="16" height="16" border="0" alt="淘宝旺旺" />{$im}</a>
+      <!-- {/if} -->
+      <!--{/foreach} 结束淘宝旺旺 -->
+      <!-- Yahoo Messenger {foreach from=$ym item=im} -->
+      <!-- {if $im} -->
+      <a href="http://edit.yahoo.com/config/send_webmesg?.target={$im}n&.src=pg" target="_blank"><img src="../images/yahoo.gif" width="18" height="17" border="0" alt="Yahoo Messenger" /> {$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束Yahoo Messenger -->
+      <!-- MSN Messenger {foreach from=$msn item=im} -->
+      <!-- {if $im} -->
+      <img src="../images/msn.gif" width="18" height="17" border="0" alt="MSN" /> <a href="msnim:chat?contact={$im}">{$im}</a>
+      <!-- {/if} -->
+      <!-- {/foreach} 结束MSN Messenger -->
+      <!-- Skype {foreach from=$skype item=im} -->
+      <!-- {if $im} -->
+      <img src="http://mystatus.skype.com/smallclassic/{$im|escape:url}" alt="Skype" /><a href="skype:{$im|escape:url}?call">{$im}</a>
+      <!-- {/if} -->
+  <!-- {/foreach} --><br />
+  </div>
+  <div class="footer_cosl"></div>'
+  <div class="clearfix">
+  
+  <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Ftanthanhgroup&amp;width=500&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=true&amp;header=true&amp;appId=469802229751141" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:290px;" allowTransparency="true"></iframe>
+  
+  
+  </div>
+		<div class="tc" id="rss" style="display: none;"><a href="{$feed_url}"><img src="../images/xml_rss2.gif" alt="rss" /></a></div>
+</div>
+</div>
+<div id="divAdRight" style="DISPLAY: none; POSITION: absolute; TOP: 0px">
+<a href="http://www.chupanhdangoai.com" target="_blank"><img src="images/bannerright.jpg" width="125" /></a>
+</div>
+<div id="divAdLeft" style="DISPLAY: none; POSITION: absolute; TOP: 0px">
+<a href="http://www.chupanhdangoai.com" target="_blank"><img src="images/bannerleft.jpg" width="125" /></a>
+</div>
+<script>
+    function FloatTopDiv()
+    {
+        startLX = ((document.body.clientWidth -MainContentW)/2)-LeftBannerW-LeftAdjust , startLY = TopAdjust+80;
+        startRX = ((document.body.clientWidth -MainContentW)/2)+MainContentW+RightAdjust , startRY = TopAdjust+80;
+        var d = document;
+        function ml(id)
+        {
+            var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+            el.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
+            el.x = startRX;
+            el.y = startRY;
+            return el;
+        }
+        function m2(id)
+        {
+            var e2=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+            e2.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';};
+            e2.x = startLX;
+            e2.y = startLY;
+            return e2;
+        }
+        window.stayTopLeft=function()
+        {
+            if (document.documentElement && document.documentElement.scrollTop)
+                var pY =  document.documentElement.scrollTop;
+            else if (document.body)
+                var pY =  document.body.scrollTop;
+            if (document.body.scrollTop > 30){startLY = 3;startRY = 3;} else {startLY = TopAdjust;startRY = TopAdjust;};
+            ftlObj.y += (pY+startRY-ftlObj.y)/16;
+            ftlObj.sP(ftlObj.x, ftlObj.y);
+            ftlObj2.y += (pY+startLY-ftlObj2.y)/16;
+            ftlObj2.sP(ftlObj2.x, ftlObj2.y);
+            setTimeout("stayTopLeft()", 1);
+        }
+        ftlObj = ml("divAdRight");
+        //stayTopLeft();
+        ftlObj2 = m2("divAdLeft");
+        stayTopLeft();
+    }
+    function ShowAdDiv()
+    {
+        var objAdDivRight = document.getElementById("divAdRight");
+        var objAdDivLeft = document.getElementById("divAdLeft");
+        if (document.body.clientWidth < 1000)
+        {
+            objAdDivRight.style.display = "none";
+            objAdDivLeft.style.display = "none";
+        }
+        else
+        {
+            objAdDivRight.style.display = "block";
+            objAdDivLeft.style.display = "block";
+            FloatTopDiv();
+        }
+    }
+</script>
+<script>
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1002;LeftBannerW = 125;RightBannerW = 125;LeftAdjust = 5;RightAdjust = 5;TopAdjust = 40;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>");
+</script>

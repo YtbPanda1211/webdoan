@@ -1,0 +1,25 @@
+ <table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+       <!-- {foreach from=$artciles_list item=article name=n} -->
+  {if $smarty.foreach.n.iteration%2==1}
+  <tr bgcolor="#FFFFFF">
+  {else}
+  <tr bgcolor="#FAFEDE">
+  {/if}
+   <td valign="top" align="left">
+   <!-- {if $article.file_url neq''} -->
+   <div style="float:left;width:110px"><a href="{$article.url}" title="{$article.title|escape:html}"><img src="{$article.file_url}" title="{$article.title|escape:html} " alt="{$article.title|escape:html}" width="110" height="100"></a></div>
+<div style="float: left; width: 600px; margin-left: 15px;"><a style="color: #007100;" href="{$article.url}" title="{$article.title|escape:html}" height="100"><h3>{$article.title|escape:html}</h3></a>
+<p style="margin:0 5px 0px 5px">{$article.content|truncate:399}
+<div align="right"><a href="{$article.url}">Xem tiếp ...</a></div>
+</p></div>
+<!-- {else} -->
+<div style="float: left; width: 710px; margin-left: 15px;"><a style="color: #007100;" href="{$article.url}" title="{$article.title|escape:html}" height="100"><h3>{$article.title|escape:html}</h3></a>
+<p style="margin:0 5px 0px 5px">{$article.content|truncate:399}
+<div align="right"><a href="{$article.url}">Xem tiếp ...</a></div>
+</p></div>
+<!-- {/if} -->
+</td>
+      
+    </tr>
+  <!-- {/foreach} -->
+    </table>

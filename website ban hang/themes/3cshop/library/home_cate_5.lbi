@@ -1,0 +1,60 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $home_cate_5.goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="recomTit">
+ <div class="recomLeft fl">
+  <p id="camera"></p>
+  <!--{foreach from=$home_cate_5.cate_list item=main_cate}-->
+  <a href="{$main_cate.url}" >
+	{$main_cate.name}
+  </a>
+
+	{assign var=allList value=$main_cate scope="global"}
+  <!--{/foreach}-->
+  
+ </div>
+ <div class="recomRight fl" id="itemHot">
+ <!--{foreach from=$allList.cat_id item=child_cate}-->
+	<a href="{$child_cate.url}" >
+	{$child_cate.name}
+	</a>	
+  <!--{/foreach}-->
+ </div>
+</div>
+<div class="recommendContent"  id="show_hot_area">
+<!-- {/if} -->
+		 <!--{foreach from=$home_cate_5.goods item=goods}-->
+			<div class="goodsbox">
+			 <div class="g_wrap1">
+				<div class="g_top1">
+				<div class="imgbox"><a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.name|escape:html}" /></a></div>
+				 <a href="{$goods.url}" class="g_title" title="{$goods.name|escape:html}">{$goods.goods_name}</a><br />
+				 <!-- {if $goods.promote_price neq ""} -->
+				 {$lang.promote_price}<b class="f1">{$goods.promote_price}</b><br />
+				 <!-- {else}-->
+				 {$lang.shop_price}<b class="f1">{$goods.shop_price}</b><br />
+				 <!--{/if}-->
+				 </div>
+				 <div class="g_bot1" onclick="parent.location='{$goods.url}'">
+				 <a class="g_title" href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.goods_name}</a><br />
+				  <!-- {if $goods.promote_price neq ""} -->
+				 {$lang.promote_price}<b class="f1">{$goods.promote_price}</b><br />
+				 <!-- {else}-->
+				 {$lang.shop_price}<b class="f1">{$goods.shop_price}</b><br />
+				 <!--{/if}-->
+				 <div class="goods_desc">
+				 {$goods.goods_brief}
+				 </div>
+				 </div>
+                 
+			 </div>	
+             <!-- {if $goods.watermark_img neq ""} -->
+             <img class="img_lable" src="themes/3cshop/images/{$goods.watermark_img}.png" /> 
+             <!--{/if}--> 
+			</div>
+		<!--{/foreach}-->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="clearfix"></div>
+</div>
+<!-- {/if} -->
+<!-- {/if} -->

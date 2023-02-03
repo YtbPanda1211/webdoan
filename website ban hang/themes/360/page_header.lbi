@@ -1,0 +1,86 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+
+<center>
+<script language=javascript>
+Stamp = new Date();
+hr = Stamp.getHours();
+var Hours;
+var Mins;
+var Time;
+Hours = Stamp.getHours();
+if ((Hours >=0) && (Hours <4)) {
+Time = " , khuya ";
+}
+if ((Hours >=4) && (Hours <12)) {
+Time = "  AM ";
+}
+if ((Hours >=12) && (Hours <19)) {
+Time = "  PM ";
+}
+if ((Hours >=19) && (Hours <24)) {
+Time = " , t&#7889;i ";
+}
+if (Hours > 12) {
+Hours -= 12;
+}
+if (Hours == 0) {
+Hours = 12;
+}
+Mins = Stamp.getMinutes();
+if (Mins < 10) {
+Mins = "0" + Mins;
+}
+
+document.write("  Hôm nay là ngày " +Stamp.getDate()+ "/"+(Stamp.getMonth() + 1) +"/"+Stamp.getFullYear() + '  ');
+document.write("                   - " + Hours + " gi&#7901; " + Mins + " phút " + Time + ' ');
+
+</script>
+</center>
+    <object height="120" width="980" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+      <param value="banner.swf" name="movie">
+     <param value="high" name="quality">
+      <param value="always" name="allowScriptAccess">
+    <param value="transparent" name="wmode">
+         <embed height="120" width="980" allowscriptaccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" type="application/x-shockwave-flash" quality="high" src="banner.swf">
+   </object>
+<div id="HeadTop" class="clearfix">
+
+
+ 
+	<div class="f_r logoRight">
+
+
+
+
+   
+	  <!--topNav start-->
+		<!--{if $navigator_list.top}-->
+		<div class="f_r TopNav">
+
+		  <span class="left"></span><span class="right"></span>
+		    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+            <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_top_list.last} -->
+             |
+            <!-- {/if} -->
+    <!-- {/foreach} -->
+		</div>
+		<!-- {/if} -->
+		<!--topNav end-->
+
+				<!--Nav start-->
+
+
+		<div id="Nav" class="clearfix">
+		  <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}><span class="left"></span><span class="right"></span>{$lang.home}</a>
+			<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+      <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}>{$nav.name}<span class="left"></span><span class="right"></span></a>
+      <!-- {/foreach} -->
+		</div>
+		<!--Nav end-->
+
+	</div>
+</div>

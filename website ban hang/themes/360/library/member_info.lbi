@@ -1,0 +1,8 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{if $user_info}
+{$lang.hello}<font class="f2">{$user_info.username}</font>
+ <a href="user.php">[{$lang.user_center}]</a>
+ <a href="user.php?act=logout">[{$lang.user_logout}]</a>
+{else}
+<font class="f1">Bạn đã có tài khoản ? </font><a href="user.php">[Đăng nhập]</a> - <font class="f1">Bạn chưa có tài khoản ? </font><a href="user.php?act=register">[Đăng ký]</a>
+{/if}

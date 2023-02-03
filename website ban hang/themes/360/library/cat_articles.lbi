@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="mod2">
+	<h1 class="clearfix"><span class="left"></span><span class="right"></span>
+	 <div class="f_l"><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></div>
+	 <div class="f_r"><a href="{$articles_cat.url}"><img src="../images/bnt_more_1.gif" alt="more" class="more" /></a></div>
+	</h1>
+	<ul class="promotion_info">
+	<!--{foreach from=$articles item=article_item}-->
+   <li>·<a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a></li>
+  <!--{/foreach}-->
+	</ul>	
+</div>

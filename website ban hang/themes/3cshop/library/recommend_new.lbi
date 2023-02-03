@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $new_goods} -->
+<!-- {if $cat_rec_sign neq 1} -->
+<div class="recomTit">
+ <div class="recomLeft newBg fl"></div>
+ <div class="recomRight fr" id="itemNew">
+  {if $cat_rec[2]}
+      <h2><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, 0);">{$lang.all_goods}</a></h2>
+      {foreach from=$cat_rec[2] item=rec_data}
+      <h2 class="h2bg"><a href="javascript:void(0)" onclick="change_tab_style('itemNew', 'h2', this);get_cat_recommend(2, {$rec_data.cat_id})">{$rec_data.cat_name}</a></h2>
+      {/foreach}
+      {/if}
+	<div class="recomMore fl"><a href="../search.php?intro=new">xem thêm >></a></div>
+ </div>
+</div>
+<div class="recommendContent"  id="show_new_area">
+<!-- {/if} -->
+		 <!--{foreach from=$new_goods item=goods}-->
+			<div class="goodsbox">
+			 <div class="g_wrap1">
+				<div class="g_top1">
+				<div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+				 <a href="{$goods.url}" class="g_title" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+				 <!-- {if $goods.promote_price neq ""} -->
+				 {$lang.promote_price}<b class="f1">{$goods.promote_price}</b><br />
+				 <!-- {else}-->
+				 {$lang.shop_price}<b class="f1">{$goods.shop_price}</b><br />
+				 <!--{/if}-->
+				 </div>
+				 <div class="g_bot1" onclick="parent.location='{$goods.url}'">
+				 <a class="g_title" href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a><br />
+				  <!-- {if $goods.promote_price neq ""} -->
+				 {$lang.promote_price}<b class="f1">{$goods.promote_price}</b><br />
+				 <!-- {else}-->
+				 {$lang.shop_price}<b class="f1">{$goods.shop_price}</b><br />
+				 <!--{/if}-->
+				 <div class="goods_desc">
+				 {$goods.goods_desc}
+				 </div>
+				 </div>
+			 </div>	 
+			</div>
+		<!--{/foreach}-->
+<!-- {if $cat_rec_sign neq 1} -->
+</div>
+<!-- {/if} -->
+<!-- {/if} -->

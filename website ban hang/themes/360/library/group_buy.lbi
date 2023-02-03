@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $group_buy_goods} -->
+<div class="modTitle clearfix">
+  <span class="left"></span><span class="right"></span>
+  <div class="f_l">{$lang.group_buy_goods}</div>
+  <div class="more"><a href="group_buy.php"><img src="images/bnt_more.gif"></a></div>
+</div>
+<div class="modBox clearfix">
+<!--{foreach from=$group_buy_goods item=goods}-->
+	<div class="goodsMod">
+	 <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" class="goodsimg" /></a><br />
+	<p><a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a></p>
+  <font class="f1">{$lang.last_price}<b>{$goods.last_price}</b></font>
+	</div>
+<!--{/foreach}-->
+</div>
+<!-- {/if} -->

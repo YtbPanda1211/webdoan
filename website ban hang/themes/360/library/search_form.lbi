@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+
+<!--search start-->
+
+<div id="Search">
+  <span class="left"></span><span class="right"></span>
+	<script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value)
+        {
+            return true;
+        }
+        else
+        {
+				    alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+   {if $searchkeywords}
+   <strong>{$lang.hot_search}:</strong>
+   {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+   {/foreach}
+   
+
+		  <!--userInfo start-->
+		<div id="rightt">
+		 {insert_scripts files='transport.js,utils.js'}
+		 {* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'}
+	</div>
+		<!--userInfo end-->
+
+
+  
+   {/if}
+   
+      
+	 <div class="clearfix FormBox">
+	 <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_l">
+	 	 
+	 <strong>Tìm kiếm:</strong> 
+   <select name="category" id="category">
+      <option value="0">{$lang.all_category}</option>
+      {$category_list}
+    </select>
+   <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="InputBorder"/>
+   <input name="imageField" type="image" src="../images/search_submit.jpg" style="position:relative; top:6px;" />
+   <a href="search.php?act=advanced_search">{$lang.advanced_search}</a>
+   </form>
+	  <div class="cart f_r" id="ECS_CARTINFO">
+		  <span class="left"></span><span class="right"></span>
+		  {insert_scripts files='transport.js'}
+		  {insert name='cart_info'}
+		</div>
+	 </div>
+</div>
+<!--search end-->

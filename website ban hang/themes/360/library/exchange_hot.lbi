@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $hot_goods}-->
+<div class="mod4">
+	<h3>
+	<div class="mod4Tit hotTit" id="itemHot"></div>
+	<span></span>
+	</h3>
+</div>
+<div class="clearfix" id="show_hot_area">
+	<!--{foreach from=$hot_goods item=goods}-->
+		<div class="goodsMod goodsModH200">
+			<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+			<p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+			{$lang.exchange_integral}<font class="price">{$goods.exchange_integral}</font>
+		</div>
+	<!--{/foreach}-->
+</div>
+<!-- {/if} -->

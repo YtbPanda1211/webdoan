@@ -1,0 +1,52 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if $top_goods}-->
+<h1 class="topTit">{$lang.top10}</h1>
+<div class="topbox blank">
+ <ol class="clearfix">
+	 <li class="w30">名次</li>
+	 <li class="w100">商品</li>
+	 <li class="w60">价格(元)</li>
+ </ol>
+ <ul id="top10">
+	 <!-- {foreach name=top_goods from=$top_goods item=goods}-->
+		<li>
+		 <div class="first">
+			<dl class="clearfix">
+			 <dt class="w30">{$smarty.foreach.top_goods.iteration}</dt>
+			 <dt class="w100">
+			 <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a><br />
+			 <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a>
+			 </dt>
+			 <dt class="w60">
+			 <span class="none" id="span_{$smarty.foreach.top_goods.iteration}">{$goods.price}</span><span class="toprice" id="price_{$smarty.foreach.top_goods.iteration}"></span>
+			 </dt>
+			</dl>
+		 </div>
+		 <div class="last">
+			<dl class="clearfix">
+			 <dt class="w30">{$smarty.foreach.top_goods.iteration}</dt>
+			 <dt class="w100">
+			 <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a>
+			 </dt>
+			 <dt class="w60">
+			 <span class="none" id="spanL_{$smarty.foreach.top_goods.iteration}">{$goods.price}</span><span id="priceL_{$smarty.foreach.top_goods.iteration}"></span>
+			 </dt>
+			</dl>
+		 </div>
+		</li>
+	 <!-- {/foreach} -->	
+ </ul>
+</div>
+<script type="text/javascript">
+top10("top10","cur");
+var itemLi = $("top10").getElementsByTagName("li");
+for(var k=1; k<=itemLi.length; k++)
+{
+  var price = $("span_"+k).innerHTML;
+	var priceL = $("spanL_"+k).innerHTML;
+	var b =/\d+/;
+	$("price_"+k).innerHTML = price.match(b);
+	$("priceL_"+k).innerHTML = price.match(b);
+}
+</script>
+<!--{/if}-->

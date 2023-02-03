@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="modTitle clearfix">
+  <span class="left"></span><span class="right"></span>
+  <div class="f_l">{$lang.new_price}</div>
+</div>
+<div class="modBox">
+    <ul class="promotion_info">
+    <!--{foreach from=$price_list item=item}-->
+    <li>·{$item.user_name}&nbsp;&nbsp;{$item.bid_price}</li>
+    <!--{/foreach}-->
+    </ul>
+</div>
+

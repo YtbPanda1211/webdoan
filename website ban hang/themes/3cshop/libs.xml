@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regions>
+  <file name="activity.dwt"/>
+  <file name="article.dwt">
+    <region name="Bên phải">
+      <lib>promotion_info</lib>
+      <lib>history</lib>
+    </region>
+  </file>
+  <file name="article_cat.dwt">
+    <region name="Bên trái">
+      <lib>article_category_tree</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+    <region name="Có thể chỉnh sửa khu vực danh mục bài viết"/>
+  </file>
+  <file name="article_pro.dwt"/>
+  <file name="auction.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="auction_list.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>promotion_info</lib>
+      <lib>history</lib>
+    </region>
+  </file>
+  <file name="brand.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>promotion_info</lib>
+      <lib>top10</lib>
+      <lib>history</lib>
+    </region>
+  </file>
+  <file name="brand_list.dwt"/>
+  <file name="catalog.dwt"/>
+  <file name="category.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>top10</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+    <region name="Có thể chỉnh sửa khu vực danh mục sản phẩm"/>
+  </file>
+  <file name="compare.dwt"/>
+  <file name="exchange_goods.dwt">
+    <region name="Có thể chỉnh sửa">
+      <lib>comments</lib>
+    </region>
+  </file>
+  <file name="exchange_list.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>top10</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+    <region name="Có thể chỉnh sửa khu vực danh mục sản phẩm">
+      <lib>exchange_hot</lib>
+    </region>
+    <region name="Có thể chỉnh sửa khu vực danh mục sản phẩm"/>
+  </file>
+  <file name="flow.dwt"/>
+  <file name="gallery.dwt"/>
+  <file name="goods.dwt">
+    <region name="Có thể chỉnh sửa">
+      <lib>goods_fittings</lib>
+      <lib>goods_related</lib>
+      <lib>goods_attrlinked</lib>
+      <lib>bought_goods</lib>
+      <lib>comments</lib>
+    </region>
+  </file>
+  <file name="group_buy_goods.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="group_buy_list.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="index.dwt">
+    <region name="Bên trái">
+      <lib>top10</lib>
+      <lib>promotion_info</lib>
+      <lib>invoice_query</lib>
+      <lib>order_query</lib>
+      <lib>email_list</lib>
+      <lib>vote_list</lib>
+    </region>
+    <region name="Bên phải">
+      <lib>recommend_promotion</lib>
+      <lib>recommend_hot</lib>
+      <lib>recommend_best</lib>
+      <lib>recommend_new</lib>
+      <lib>brands</lib>
+      <lib>group_buy</lib>
+      <lib>auction</lib>
+    </region>
+  </file>
+  <file name="message.dwt"/>
+  <file name="message_board.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>top10</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="myship.dwt"/>
+  <file name="package.dwt"/>
+  <file name="pick_out.dwt">
+    <region name="Bên trái">
+      <lib>categorys</lib>
+      <lib>top10</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="quotation.dwt"/>
+  <file name="receive.dwt"/>
+  <file name="respond.dwt"/>
+  <file name="search.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>top10</lib>
+      <lib>history</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="snatch.dwt">
+    <region name="Bên trái">
+      <lib>category_tree</lib>
+      <lib>promotion_info</lib>
+    </region>
+  </file>
+  <file name="style.css"/>
+  <file name="tag_cloud.dwt"/>
+  <file name="topic.dwt"/>
+  <file name="user_clips.dwt"/>
+  <file name="user_passport.dwt"/>
+  <file name="user_transaction.dwt"/>
+  <file name="wholesale_list.dwt"/>
+</regions>

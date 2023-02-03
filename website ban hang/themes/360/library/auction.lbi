@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $auction_list} -->
+<div class="modTitle clearfix">
+  <span class="left"></span><span class="right"></span>
+  <div class="f_l">{$lang.auction_goods}</div>
+  <div class="more"><a href="auction.php"><img src="../images/bnt_more.gif"></a></div>
+</div>
+<div class="modBox clearfix">
+<!--{foreach from=$auction_list item=auction}-->
+  <div class="goodsMod">
+	<a href="{$auction.url}"><img src="{$auction.thumb}" alt="{$auction.goods_name|escape:html}"/></a><br />
+  <p><a href="{$auction.url}" title="{$auction.goods_name|escape:html}">{$auction.short_style_name|escape:html}</a></p>
+  <font class="f1">{$auction.formated_start_price}</font>
+	</div>
+	<!--{/foreach}-->
+</div>
+<!-- {/if} -->

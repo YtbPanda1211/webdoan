@@ -1,0 +1,7 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<h1 class="topTit"><div class="fl"><a href="{$articles_cat.url}">{$articles_cat.name|escape:html}</a></div><div class="fr"><a href="{$articles_cat.url}" class="more">xem thêm >></a></div></h1>
+<div class="topbox topContent blank">
+	 <!--{foreach from=$articles item=article_item}-->
+   <a href="{$article_item.url}" title="{$article_item.title|escape:html}" class="txtdot">{$article_item.short_title|truncate:14}</a><br />
+   <!--{/foreach}-->
+</div>

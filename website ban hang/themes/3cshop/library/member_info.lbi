@@ -1,0 +1,9 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{if $user_info}
+{$lang.hello}<b class="username">{$user_info.username}</b>
+<a href="user.php" class="userContent">{$lang.user_center}</a>
+[<a href="user.php?act=logout">{$lang.user_logout}</a>]
+{else}
+{$lang.welcome}! [<a href="user.php">Đăng nhập</a>]  
+[<a href="user.php?act=register">Đăng ký</a>]
+{/if}

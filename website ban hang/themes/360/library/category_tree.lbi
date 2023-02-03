@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function $(element) {
+ return document.getElementById(element);
+}
+function showMenu(menuID,index) {
+ $(menuID).style.display=(index==0?"none":"block");
+}
+
+</script>
+<div class="modTitle clearfix">
+	<span class="left"></span><span class="right"></span>
+	<div class="fl">{$lang.goods_category}</div>
+	<div class="more"><a href="catalog.php" target="_blank">{$lang.catalog}</a></div>
+</div>
+<div class="modBox">
+  <dl id="category_tree">
+<!--{foreach name=parent-cat from=$categories item=cat}-->
+    <li onMouseOver="<!--{if $cat.cat_id}-->showMenu('c{$smarty.foreach.parent-cat.iteration}',1); this.className='cctv';<!--{/if}-->"  onMouseOut="<!--{if $cat.cat_id}-->showMenu('c{$smarty.foreach.parent-cat.iteration}',0); this.className='';<!--{/if}-->">
+   <a href="{$cat.url}">{$cat.name|escape:html}</a>
+   <!--{if $cat.cat_id}-->
+   <div id="c{$smarty.foreach.parent-cat.iteration}" class="children">   
+   <div class="conter clearfix">
+   <div class="suq"></div>
+	   <div class="ChildrenLi">
+		   <ul>
+   <!--{foreach name=cat_child  from=$cat.cat_id item=child}-->
+	   <li>
+    <a href="{$child.url}" class="ChildrenLi">{$child.name|escape:html}</a>
+		</li>
+   <!--{/foreach}-->
+	  </ul>
+	 </div>
+   </div>
+   </div>   
+   <!--{/if}-->     
+     </li>
+   <!--{/foreach}-->
+	 </ul>
+</div>  

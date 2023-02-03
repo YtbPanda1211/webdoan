@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $article_categories } -->
+<div class="modTitle clearfix">
+	<span class="left"></span><span class="right"></span>
+	<div class="f_l">{$lang.article_cat}</div>
+</div>
+<div class="modBox">
+  <dl id="category_tree">
+	<!--{foreach from=$article_categories item=cat}-->
+    <dt><a href="{$cat.url}" class="us_textDot">{$cat.name|escape:html}</a></dt>
+      <dd>
+			<!--{foreach from=$cat.children item=child}-->
+			&nbsp;&nbsp;·<a href="{$child.url}">{$child.name|escape:html}</a><br>
+			<!--{/foreach}-->
+			</dd>
+    <!--{/foreach}-->
+	</dl> 
+</div>
+<!--{/if} -->

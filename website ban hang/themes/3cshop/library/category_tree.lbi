@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="cateTit">
+<div class="cateTit1">
+Danh mục 
+<strong>Sản phẩm</strong>
+</div>
+</div>
+<div class="cateContent blank"> 
+ <dl>
+ <!--{foreach from=$categories item=cat}-->
+ <dt><a href="{$cat.url}">{$cat.name|escape:html}</a>
+  <!--{if $cat.cat_id}-->
+  <div class="cate_child  cate_{$cat.id}">
+  <div class="cate-wrap">
+  <h3>{$cat.name|escape:html}</h3>
+ <!--{foreach name=childs from=$cat.cat_id item=child}-->
+     <p onMouseOver="this.className='itemsbg'" onMouseOut="this.className=''"><a href="{$child.url}" title="{$child.name|escape:html}">{$child.name|escape:html}</a></p>
+ <!--{/foreach}-->
+ <div class="cate_overlay"></div>
+ </div>
+ </div>
+  <!--{/if}-->
+ </dt>
+
+ <dd class="clearfix"  >
+ </dd>
+
+ <!--{/foreach}-->
+ </dl>
+<div class="cateBott"></div>
+
+</div>
+{literal}
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script>
+/*
+$(document).ready(function($) {
+	$('.cateContent  dt').hover(function(){
+		$(this).find('.cate_child').css({visibility : "visible"});
+		},function(){
+		$(this).find('.cate_child').css({visibility : "hidden"});
+		}
+	);
+});
+*/
+</script>
+{/literal}

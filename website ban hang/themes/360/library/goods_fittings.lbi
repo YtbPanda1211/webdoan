@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $fittings} -->
+<!--{foreach from=$fittings item=goods}-->
+  <div class="goodsMod">
+	<a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.name|escape:html}" /></a><br />
+  <p><a href="{$goods.url}" target="_blank" title="{$goods.goods_name|escape:html}">{$goods.short_name|escape:html}</a></p>
+  <font class="f1">{$lang.fittings_price}<b>{$goods.fittings_price}</b></font>
+	</div>
+	<!--{/foreach}-->
+<!--{else}-->
+<img src="../images/nopic.gif">
+<!-- {/if} -->

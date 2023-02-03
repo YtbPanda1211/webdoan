@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+<script type="text/javascript" src="js/action.js"></script>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="pageWarp clearfix">
+  <div id="pageLeft" class="fl">
+	 <!-- TemplateBeginEditable name="Bên trái" -->
+<!-- #BeginLibraryItem "/library/category_tree2.lbi" -->
+
+<div class="cateTit"></div>
+<div class="cateContent blank"> 
+ <dl>
+ <!--{foreach from=$categories item=cat}-->
+ <dt><a href="{$cat.url}">{$cat.name|escape:html}</a></dt>
+ <!--{if $cat.cat_id}-->
+ <dd class="clearfix">
+ <!--{foreach name=childs from=$cat.cat_id item=child}-->
+     <p onMouseOver="this.className='itemsbg'" onMouseOut="this.className=''"><a href="{$child.url}" title="{$child.name|escape:html}">{$child.name|escape:html}</a></p>
+ <!--{/foreach}-->
+ </dd>
+ <!--{/if}-->
+ <!--{/foreach}-->
+ </dl>
+<div class="cateBott"></div>
+</div>
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/history.lbi" -->
+
+<div id='history_div' class="blank">
+	<h1 class="topTit">{$lang.view_history}</h1>
+	<div id='history_list' class="history_list">
+	 {insert name='history'}
+  </div>
+</div>
+<script type="text/javascript">
+if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
+{
+    document.getElementById('history_div').style.display='none';
+}
+else
+{
+    document.getElementById('history_div').style.display='block';
+}
+function clear_history()
+{
+Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
+}
+function clear_history_Response(res)
+{
+document.getElementById('history_list').innerHTML = '{$lang.no_history}';
+}
+</script>
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/promotion_info.lbi" -->
+
+<!-- {if $promotion_info} -->
+<h1 class="topTit">{$lang.promotion_info}</h1>
+<div class="topbox topContent blank">
+	<!-- {foreach from=$promotion_info item=item key=key} -->
+	<!-- {if $item.type eq "snatch"} -->
+    <a href="snatch.php" title="{$lang.$item.type}" class="txtdot">{$lang.snatch_promotion}</a>
+    <!-- {elseif $item.type eq "group_buy"} -->
+    <a href="group_buy.php" title="{$lang.$item.type}" class="txtdot">{$lang.group_promotion}</a>
+    <!-- {elseif $item.type eq "auction"} -->
+    <a href="auction.php" title="{$lang.$item.type}" class="txtdot">{$lang.auction_promotion}</a>
+    <!-- {elseif $item.type eq "favourable"} -->
+    <a href="activity.php" title="{$lang.$item.type}" class="txtdot">{$lang.favourable_promotion}</a>
+		<!-- {elseif $item.type eq "package"} -->
+    <a href="package.php" title="{$lang.$item.type}" class="txtdot">{$lang.package_promotion}</a>
+    <!-- {/if} -->
+    <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}">{$item.act_name|truncate:8}</a><br />
+	<!-- {/foreach} -->
+</div>
+<!-- {/if} -->			
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+	</div>
+	<div id="pageRight" class="fr">
+	<!-- #BeginLibraryItem "/library/cart.lbi" --><!-- #EndLibraryItem -->
+	<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+		<div class="mod2Tit">{$lang.group_buy_goods}</div>
+		<div class="grouplist clearfix">
+			 <!-- {if $gb_list} 如果有团购活动 -->
+				<!-- {foreach from=$gb_list item=group_buy} 循环团购活动开始 -->
+				<div class="group_buy_list clearfix">
+					<div class="fl groupImg">
+						<a href="{$group_buy.url}"><img src="{$group_buy.goods_thumb}" border="0" alt="{$group_buy.goods_name|escape:html}" /></a>
+					</div>
+					<div class="fl">
+					{$lang.gb_goods_name}<a href="{$group_buy.url}"><font class="f14b">{$group_buy.goods_name|escape:html}</font></a><br />
+					{$lang.act_time}:<font class="f1">{$group_buy.formated_start_date} -- {$group_buy.formated_end_date}</font><br />
+					{$lang.gb_price_ladder}<br />
+					<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd">
+					 <tr>
+							<th width="29%" bgcolor="#FFFFFF">{$lang.gb_ladder_amount}</th>
+						 <th width="71%" bgcolor="#FFFFFF">{$lang.gb_ladder_price}</th>
+						</tr>
+						<!-- {foreach from=$group_buy.price_ladder item=item} -->
+						<tr>
+							<td width="29%" bgcolor="#FFFFFF">{$item.amount}</td>
+						 <td width="71%" bgcolor="#FFFFFF">{$item.formated_price}</td>
+						</tr>
+						<!-- {/foreach} -->
+					</table>
+					</div>
+				</div>
+				<!--{/foreach}-->
+				<!-- {else} -->
+				 <div class="tips">{$lang.group_goods_empty}</div>
+				<!-- {/if} -->	
+	</div>
+	<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+	</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

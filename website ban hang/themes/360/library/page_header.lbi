@@ -1,0 +1,33 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="themes/360/qq/images/qq.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='themes/360/qq/ServiceQQ.js' type='text/javascript' charset='utf-8'></script>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+<div id="HeadTop" class="clearfix">
+ 
+	<div class="f_r logoRight">
+	  <!--topNav start-->
+		<!--{if $navigator_list.top}-->
+		<div class="f_r TopNav">
+		  <span class="left"></span><span class="right"></span>
+		    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+            <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+            <!-- {if !$smarty.foreach.nav_top_list.last} -->
+             |
+            <!-- {/if} -->
+    <!-- {/foreach} -->
+		</div>
+		<!-- {/if} -->
+		<!--topNav end-->
+		
+		<!--Nav start-->
+		<div id="Nav" class="clearfix">
+		  <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}><span class="left"></span><span class="right"></span>{$lang.home}</a>
+			<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+      <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}>{$nav.name}<span class="left"></span><span class="right"></span></a>
+      <!-- {/foreach} -->
+		</div>
+		<!--Nav end-->
+	</div>
+</div>

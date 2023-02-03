@@ -1,0 +1,11 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<h1 class="topTit">{$lang.article_releate}</h1>
+<div class="topbox topContent blank">
+<!-- {if $goods_article_list} -->
+	<!-- {foreach from=$goods_article_list item=article} 相关文章 -->
+   <a href="{$article.url}" title="{$article.title|escape:html}" class="txtdot">{$article.short_title|truncate:13}</a><br />
+  <!--{/foreach}-->
+<!-- {else} -->
+Không có bài viết liên quan!
+<!-- {/if} -->	
+</div>

@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $brand_list} -->
+<div class="modTitle clearfix">
+	<span class="left"></span><span class="right"></span>
+	<div class="f_l">Thương hiệu</div>
+	<div class="more"><a href="../brand.php">Tất cả</a></div>
+</div>
+<div class="modBox_1 clearfix" id="brands">
+   <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+    {if $smarty.foreach.brand_foreach.index <= 11}
+      <!-- {if $brand.brand_logo} -->
+      <div class="bradnsLogo">
+			<a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html} ({$brand.goods_num})" /></a>
+			</div>
+      <!-- {else} -->
+      <div class="bradnsLogo">
+        <a href="{$brand.url}">{$brand.brand_name|escape:html} {if $brand.goods_num}({$brand.goods_num}){/if}</a>
+      </div>
+      <!-- {/if} -->
+    {/if}
+  <!-- {/foreach} -->
+</div>
+<!-- {/if} -->

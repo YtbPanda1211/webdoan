@@ -1,0 +1,123 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+<!--
+.style3 {
+    background:url(../images/h3.jpg) repeat-x ;
+    height: 27px;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 27px;
+    padding: 0 12px;
+    position: relative;
+	
+}
+-->
+</style>
+<div class="blank5"></div>
+<div class="box">
+ <div class="box_1" align="center">
+  <h3 class="style3"> TỶ GIÁ NGOẠI TỆ</h3>
+
+  <div class="boxCenterList">
+    <div class="modBox vote">
+<td height="25">
+<img src="http://www.vnexpress.net/Images/money.gif" width="14" height="18" align="absmiddle" />
+<span class="style37">Giá vàng 9999</span></td>
+</tr>
+
+<tr>
+<script language="javascript" src="http://www.vnexpress.net/service/Gold_Content.js"></script>
+<table width="95%" border="1" cellpadding="2" cellspacing="0" bordercolor="#a9a9a9" style="border-collapse: collapse">
+<tbody>
+<tr>
+<td>Mua vào </td>
+<td align="right"><script language="javascript">document.write(vGoldSjcBuy);</script></td>
+</tr>
+<tr>
+<td>Bán ra</td>
+<td align="right"><script language="javascript">document.write(vGoldSjcSell);</script></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+<tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="95%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="25"><img src="http://www.vnexpress.net/Images/circle-chart.gif" width="17" height="16" align="absmiddle" /> <span class="style37">Tỷ giá</td>
+<label style="font:italic 10px arial; color:#05324f;">(Nguồn: <a href="http://www.sacombank-sbj.com/" target="_blank"><img  style="border:0px;vertical-align:middle" src="http://www.vnexpress.net/Images/logoSb.gif" /></a>)</label>
+</tr>
+<tr>
+<td class="namcoi">
+<script language="javascript" src="http://www.vnexpress.net/Service/Forex_Content.js"></script>
+<div style="height:70px; border:#a9a9a9 1px solid; border-right:0px; overflow:auto">
+<table width="145" border="1" cellpadding="2" cellspacing="0" bordercolor="#a9a9a9" style="border-collapse: collapse">
+<tbody>
+<tr>
+<td class="td1"><script language="javascript">document.write (vForexs[0]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[0]);</script></td>
+</tr>
+<tr>  
+<td class="td1"><script language="javascript">document.write(vForexs[1]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[1]);</script></td>
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[2]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[2]);</script></td>
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[3]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[3]);</script></td>
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[4]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[4]);</script></td> 
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[5]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[5]);</script></td>
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[6]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[6]);</script></td>
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[7]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[7]);</script></td> 
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[8]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[8]);</script></td>
+</tr>
+<tr>
+<td class="td1"><script language="javascript">document.write(vForexs[9]);</script></td>
+<td align="right"><script language="javascript">document.write(vCosts[9]);</script></td>
+</tr>
+</tbody> 
+</table>
+</div>
+</td>
+</tr>
+<tr> </tr>
+<tr> </tr> 
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><label style="font:italic 10px arial; color:#05324f;">(Nguồn: <a href="http://www.eximbank.com.vn" target="_blank"><img  style="border:0px;vertical-align:middle" src="http://www.vnexpress.net/Images/logo-EXIM.gif" /></a>)</label>
+  </div>
+ </div>
+</div>
+</div>
+<div class="blank5"></div>

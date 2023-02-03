@@ -1,0 +1,11 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="mod2">
+	<h1><span class="left"></span><span class="right"></span>
+	{$lang.new_article}
+	</h1>
+	<div class="notice">
+<!--{foreach from=$new_articles item=article}-->
+<a href="{$article.url}" title="{$article.title|escape:html}"><img src="{$article.file_url}" title="{$article.title|escape:html} " alt="{$article.title|escape:html}" width="51" height="50">{$article.short_title|truncate:40}</a><br />
+<!--{/foreach}-->
+	</div>	
+</div>

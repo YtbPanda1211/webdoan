@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_info} -->
+<div class="mod2">
+	<h1><span class="left"></span><span class="right"></span>{$lang.promotion_info}</h1>
+	<ul class="promotion_info">
+	 <!-- {foreach from=$promotion_info item=item key=key} -->
+	<li>
+	<!-- {if $item.type eq "snatch"} -->
+    ·<a href="snatch.php" title="{$lang.$item.type}">{$lang.snatch_promotion}</a>
+    <!-- {elseif $item.type eq "group_buy"} -->
+    ·<a href="group_buy.php" title="{$lang.$item.type}">{$lang.group_promotion}</a>
+    <!-- {elseif $item.type eq "auction"} -->
+    ·<a href="auction.php" title="{$lang.$item.type}">{$lang.auction_promotion}</a>
+    <!-- {elseif $item.type eq "favourable"} -->
+    ·<a href="activity.php" title="{$lang.$item.type}">{$lang.favourable_promotion}</a>
+    <!-- {elseif $item.type eq "package"} -->
+    ·<a href="package.php" title="{$lang.$item.type}">{$lang.package_promotion}</a>
+    <!-- {/if} -->
+    <a href="{$item.url}" title="{$lang.$item.type} {$item.act_name}{$item.time}" style="background:none; padding-left:0px;">{$item.act_name}</a>
+	</li>
+	<!-- {/foreach} -->
+	</ul>	
+</div>
+<!-- {/if} -->			

@@ -1,0 +1,15 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $group_buy_goods} -->
+<div class="modbox">
+	<h1 class="modTit"><div class="fl">{$lang.group_buy_goods}</div><div class="fr more"><a href="group_buy.php">xem thêm >></a></div></h1>
+	<div class="recommendContent">
+	<!--{foreach from=$group_buy_goods item=goods}-->
+	<div class="goodsbox">
+	 <div class="imgbox"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.goods_name|escape:html}" /></a></div>
+	 <a href="{$goods.url}" title="{$goods.goods_name|escape:html}">{$goods.short_style_name|escape:html}</a><br />
+   {$lang.last_price}<b class="f1">{$goods.last_price}</b>
+	</div>
+ <!--{/foreach}-->
+	</div>
+</div>
+<!-- {/if} -->

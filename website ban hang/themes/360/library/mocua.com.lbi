@@ -1,0 +1,105 @@
+<div class="menu_1_c">
+<div class="DivKata" style='padding-left:1;width:97%;text-transform:uppercase;'>
+<Script language="JavaScript" src="http://vnexpress.net/Service/Weather_Content.js"></Script>
+<div style="padding:2px;">
+<table>
+                    <Script language="JavaScript">
+
+                        document.write("<tr><td width=40%>" + vHanoi + "</td><td align=right>" + dHanoi + "<sup>o</sup>C</td></tr>");
+
+                        document.write("<tr><td>" + vHaiPhong  + "</td><td align=right>" + dHaiPhong + "<sup>o</sup>C</td></tr>");
+
+                        document.write("<tr><td>" + vDaNang + "</td><td align=right>" + dDaNang + "<sup>o</sup>C</td></tr>");
+
+                        document.write("<tr><td>" + vHoChiMinh + "</td><td align=right>" + dHoChiMinh + "<sup>o</sup>C</td></tr>");
+
+                    </Script>
+</table></div>
+</div>
+</div>
+<div align="center">------------------</div>
+
+<tr><td> 
+        <table class="bor_ctd" border="0"  cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff"> 
+			<script type="text/javascript" language="JavaScript" src="http://www.vnexpress.net/Service/Gold_Content.js"></script>             <script type="text/javascript" language="JavaScript" src="js/giavang.js"></script> 
+             </table> 
+            </td></tr> 
+       </table> 
+           </td> 
+  </tr>
+  
+<script src="http://vnexpress.net/Service/Forex_Content.js" type="text/javascript"></script>
+<table style="margin: 10px auto; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" border="1" cellspacing="1" cellpadding="1" width="100%">
+<tbody>
+<tr class="bgwhite">
+<td>USD</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[0]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>EUR</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[10]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>GBP</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[1]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>HKD</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[2]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>JPY</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[6]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>AUD</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[7]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>CAD</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[8]);
+// ]]></script>
+0</td>
+</tr>
+<tr class="bgwhite">
+<td>SGD</td>
+<td style="text-align: right;">
+<script type="text/javascript">// <![CDATA[
+document.write(vCosts[9]);
+// ]]></script>
+0</td>
+</tr>
+</tbody>
+</table>
+<table id="PortalTren1_TinNhan1_dtlMessage" style="border-collapse: collapse" border="1" cellspacing="0">
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>

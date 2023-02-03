@@ -1,0 +1,13 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $brand_list} -->
+<div class="brands clearfix blank">
+  <h1 class="brandTit clearfix"><div class="fl">Thương hiệu</div><div class="fr more"><a href="../brand.php" class="brandMore">Tất cả</a></div></h1>
+		 <!-- {foreach from=$brand_list item=brand name="brand_foreach"} -->
+      <!-- {if $brand.brand_logo} -->
+			<a href="{$brand.url}"><img src="data/brandlogo/{$brand.brand_logo}" alt="{$brand.brand_name|escape:html} ({$brand.goods_num})" /></a>
+      <!-- {else} -->
+        <a href="{$brand.url}" class="brandtxt">{$brand.brand_name|escape:html} {if $brand.goods_num}({$brand.goods_num}){/if}</a>
+      <!-- {/if} -->
+   <!-- {/foreach} -->
+</div>
+<!-- {/if} -->

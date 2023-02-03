@@ -1,0 +1,140 @@
+/**
+ * MOCUA.COM - ECSHOP - PAYNEMT BAOKIM.VN
+ * ============================================================================
+ * ©MoCua™
+ * ©MoCua™: http://www.mocua.com；
+ * ----------------------------------------------------------------------------
+ * Vui lòng đọc kĩ các hướng dẫn trước khi sử dụng
+ * Nếu bạn có các vấn đề vướng mắc, vui lòng vào: http://www.mocua.com/shop-ecshop.html  để được giải đáp
+ * ============================================================================
+ * Hình thức thanh toán qua Bảo Kim
+ **/
+
+.title_type{
+    font-family: Tahoma ;
+    font-size: 13px;
+    color: #0072BC;
+    cursor: pointer;
+    width: 606px;
+    padding: 3px 0px 3px 0px;
+    border-bottom: solid #004787 thin;
+}
+
+.title_via_bk{
+    font-family: Tahoma ;
+    font-size: 13px;
+    color: #0072BC;
+    width: 606px;
+    padding: 3px 0px 3px 0px;
+    border-bottom: solid #004787 thin;
+}
+
+.title_via_bk a{
+    text-decoration: none;
+    color: #0072BC;
+}
+
+.content_bank{
+    border: solid #EAEAEA thin;
+    border-top: none;
+    background: transparent;
+    width: 604px;
+}
+
+.content_bank_hidden{
+    display: none;
+}
+
+.content_bank .content{
+    width: 600px;
+    border: none;
+    background-image: url("../images/bg_content_bank.png");
+    background-repeat: repeat-x;
+    display: table-cell;
+    margin: 2px;
+}
+
+.content_bank .content .bank{
+    margin: 5px;
+    float: left;
+    width: 68px;
+    height: 42px;
+    display: table;
+    cursor: pointer;
+}
+
+.content_bank .content .bank-hover{
+    margin: 5px;
+    float: left;
+    width: 68px;
+    height: 42px;
+    display: table;
+    background-color: #5E9EBF;
+}
+
+.content_bank .content .bank-click{
+    margin: 5px;
+    float: left;
+    width: 68px;
+    height: 42px;
+    display: table;
+    background-color: #5E9EBF;
+}
+
+#step-payment-bk-2{
+    display: none;
+}
+
+.title-step{
+    font-weight: bold;
+    color: red;
+}
+
+.payment_mode{
+    font-weight: bold;
+    color: #0072BC;
+    
+}
+
+.fieldset-title{
+    font-weight: bold;
+    color: #0072BC;
+    font-size: 14px;
+}
+
+.fieldset-content{
+    border: solid silver thin;
+    border-top: solid #004787 thin;
+    background: transparent;
+    width: 600px;
+}
+
+.fieldset-content .content{
+    background-image: url("../images/bg_content_bank.png")/*tpa=http://shopping.baokim.vn/v2/images/bg_content_bank.png*/;
+    background-repeat: repeat-x;
+    padding: 1px;
+    margin: 2px;
+}
+
+.fieldset-content .content ul{
+    margin: 10px 5px 10px 5px;
+    font-family: Arial;
+    font-size: 12px;
+    color: #333333;
+}
+
+.fieldset-content .content ul{
+    list-style-image: url("../images/li_tag.png")/*tpa=http://shopping.baokim.vn/v2/images/li_tag.png*/;
+    word-spacing:3px;
+    line-height: 20px;
+}
+
+.divChecked{
+    display: none;
+}
+
+.imgChecked{
+    margin-left: -20px;
+    margin-top: 18px;
+    width: 20px;
+}

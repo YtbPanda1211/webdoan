@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="clearfix blank">
+  <div class="pageNav fl">
+	 <ul class="clearfix">
+		 <li {if $navigator_list.config.index eq 1} class="curs"{/if}><a href="../index.php">{$lang.home}</a></li>
+		 <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+			<li {if $nav.active eq 1} class="curs"{/if}><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></li>
+		 <!-- {/foreach} -->
+		 </ul>
+	</div>
+	<div class="cartBox fr">
+	{insert_scripts files='transport.js'}
+	<span  id="ECS_CARTINFO" class="none"></span>
+	{insert name='cart_info'}
+
+	</div>
+	<script type="text/javascript">cart();</script>
+</div>

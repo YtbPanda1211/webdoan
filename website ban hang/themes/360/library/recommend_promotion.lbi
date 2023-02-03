@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $promotion_goods} -->
+<div class="mod3">
+	<h3>
+	<div class="mod3Tit">&nbsp;</div>
+	<a href="../search.php?intro=promotion"><img src="images/bnt_more_1.gif" class="more" /></a>
+	<span></span>
+	</h3>
+</div>
+<div class="clearfix">
+<!--{foreach from=$promotion_goods item=goods name="promotion_foreach"}-->
+	<div class="goodsMod">
+	 <div class="promotion">
+	   <a href="{$goods.url}"><img src="{$goods.thumb}" border="0" alt="{$goods.name|escape:html}"/></a>
+	 	 <div class="price">{$goods.promote_price}</div>
+	 </div>
+	 <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}</a></p>
+	</div>
+<!--{/foreach}-->
+</div>
+<!-- {/if} -->
